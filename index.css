@@ -1,0 +1,50 @@
+.animate-fade {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+
+#main-menu .container-fluid {
+    min-height: 80vh;
+}
+
+
+textarea {
+    resize: none;
+}
+
+
+#notes-list {
+    max-height: 400px;
+}
+
+#notes-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#notes-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+
+.left, .right {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 10%;
+  background: linear-gradient(to top, black, rgb(74, 111, 165));
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
