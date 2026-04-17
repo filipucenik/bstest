@@ -85,26 +85,26 @@
 
     <script>
         function showPage(id) {
-            // Sakriva sva tri kontejnera//
+            // Sakriva sva tri diva
             document.getElementById('login-page').classList.add('d-none');
             document.getElementById('signup-page').classList.add('d-none');
             document.getElementById('main-menu').classList.add('d-none');
             
-           
-            const target = document.getElementById(id);
-            target.classList.remove('d-none');
+    
+            const target = document.getElementById(id); //Pronalazi odabrani dic
+            target.classList.remove('d-none'); //Odabrani div prestaje da bude sakriven
             if(id !== 'login-page') target.classList.add('d-flex');
         }
 
         function simulateResponse() {
-            const input = document.getElementById('chat-input').value;
-            const output = document.getElementById('chat-output');
-            if(input.trim()) {
+            const input = document.getElementById('chat-input').value; //Uzima uneti text
+            const output = document.getElementById('chat-output'); //Ovde se ispisuje odgovor
+            if(input.trim()) { //Proverava da tekst nije prazan
                 output.innerHTML = `<strong>Assistant:</strong> To je sjajno pitanje o "${input}"! Evo šta sam pronašao... <br> <small class="text-muted">Tip: Koristite prečicu Ctrl+S za čuvanje.</small>`;
             }
         }
 
-        function addNote() {
+        function addNote() { //Pravi novi div, daje mu atribute,unacuje text i dodaje ga ispod poslednjeg
             const list = document.getElementById('notes-list');
             const div = document.createElement('div');
             div.className = "input-group mb-2 shadow-sm animate-fade";
@@ -112,7 +112,7 @@
             list.appendChild(div);
         }
 
-        function removeNote() {
+        function removeNote() { //Proverava da li ima note da se obrise i ako ima brise
             const list = document.getElementById('notes-list');
             if(list.lastChild) list.removeChild(list.lastChild);
         }
