@@ -2,6 +2,8 @@
     animation: fadeIn 0.4s ease-out;
 }
 
+
+/* nevidljiv i pomeren udesno za 20 px, pa onda postaje vidljiv i vraca se na originalnu poziciju */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateX(20px); }
     to { opacity: 1; transform: translateX(0); }
